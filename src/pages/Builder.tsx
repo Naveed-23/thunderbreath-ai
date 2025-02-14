@@ -202,9 +202,9 @@ export function Builder() {
       
       <div className="flex-1 overflow-hidden">
         <div className="h-full grid grid-cols-4 gap-6 p-6">
-          <div className="col-span-1 space-y-6 overflow-auto">
+          <div className="col-span-1 space-y-6 overflow-hidden">
             <div>
-              <div className="max-h-[75vh] overflow-scroll">
+              <div className="max-h-[75vh] overflow-hidden">
                 <StepsList
                   steps={steps}
                   currentStep={currentStep}
@@ -215,7 +215,7 @@ export function Builder() {
                 <div className='flex'>
                   <br />
                   {(loading || !templateSet) && <Loader />}
-                  {!(loading || !templateSet) && <div className="flex gap-2 items-center w-full bg-gray-800 rounded-lg p-2">
+                  {!(loading || !templateSet) && <div className="mt-4 flex gap-2 items-center w-full bg-gray-800 rounded-lg p-2">
                     <textarea 
                       value={userPrompt} 
                       onChange={(e) => setPrompt(e.target.value)}
